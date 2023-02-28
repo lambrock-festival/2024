@@ -1,3 +1,3 @@
-# Menu
+# Che se magna?
 
-È un *menu*.
+Questo È un *menu* inclusivo.

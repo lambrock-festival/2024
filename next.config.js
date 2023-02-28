@@ -1,3 +1,3 @@
 module.exports = {
-  basePath: '/2022',
+  basePath: '/2023',
 }
