@@ -11,6 +11,8 @@ export default function Home({ data }) {
   );
 }
 
+// caro Maurizio
+
 export async function getStaticProps() {
   const data = getPageMD("home");
   return {
