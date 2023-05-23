@@ -1,0 +1,43 @@
+.img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lupifalocol {
+    width: 100%;
+    height: 950px;
+    object-fit: fixed;
+    object-position: center;
+}
+
+.borraccia {
+    width: fit-content;
+    float: left;
+    shape-outside: circle(50%);
+}
+
+.p {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.h1 {
+    font-size: 3.5rem;
+    margin-top: 125px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .img {
+        height: 55vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img {
+        height: 55vh;
+    }
+}

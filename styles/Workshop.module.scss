@@ -1,0 +1,91 @@
+.img {
+    width: 100%;
+    height: 75vh;
+}
+
+.ExportedImage {
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E95280;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    //border-radius: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+        color: #E95280;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+    }
+}
+
+.btnSpecular {
+    // same as .btn but is specular
+    // only means that is on the right side of the page
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E95280;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    //border-radius: 3px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    float: right;
+
+    &:hover {
+        background-color: #fff;
+        color: #E95280;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+    }
+}
+
+.imgBox {
+    width: 100%;
+    //height: 75vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.directionRtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.directionLtr {
+    direction: ltr;
+}
+
+.liEmbended {
+    display: list-item;
+    text-align: right;
+    margin-right: 18px;
+}
+
+@media screen and (max-width: 992px) {
+    .img {
+        height: 55vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img {
+        height: 55vh;
+    }
+}

@@ -1,0 +1,59 @@
+.container {
+    font-family: 'Oswald', sans-serif;
+    width: fit-content;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.content {
+    text-align: center;
+    background-color: rgba(88, 88, 88, 0.185) blur(1px);
+
+    p {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        text-shadow: 0px 0 10px rgba(0, 0, 0, 0.856);
+        text-transform: uppercase;
+    }
+
+    p span {
+        color: #E95280;
+        text-shadow: 0 0 10px rgba(119, 119, 119, 0.801);
+        font-size: 35px;
+        //stroke: #000;
+        -webkit-text-stroke: 1px black;
+        -moz-text-strokes: 1px black;
+    }
+}
+
+.content h1 span {
+    color: #E95280;
+    //stroke: 1px black;
+    //-webkit-text-stroke: 1px black;
+}
+
+
+.lupifalocol {
+    object-fit: fixed;
+    object-position: center;
+}
+
+.date {
+    font-family: 'NoMoreLies', sans-serif;
+    color: #E95280;
+    -webkit-text-stroke: 1px black;
+
+    span {
+        color: #f6bbc6;
+    }
+}
+
+/*
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {} 
+*/
