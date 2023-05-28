@@ -106,7 +106,7 @@ export default function Workshop({ data }) {
             copy: 'I bambini entreranno in contatto diretto con cani addestrati (vaccinati e assicurati) in ambito educativo: impareranno ad accarezzare, spazzolare, dare da mangiare e interagire correttamente con i pet. Laboratorio rivolto ai bambini dagli 0 ai 10 anni in modo differenziato; con Claudia Bordoli di Dog4Life.'
         },
         {
-            name: 'PEDAGOGISTA_LAB',
+            name: 'OGNI BAMBIN* È UN ARTISTA',
             copy: 'Imparare divertendosi: laboratori pensati e strutturati per fare in modo che i bambini potenzino le loro capacità attraverso l’uso di diversi materiali(carta, gomma eva, pannolenci, plastilina) e sviluppino la motricità fine.Età minima: dai 4 anni, dai 3 alla presenza di un genitore.'
         },
         {
@@ -123,7 +123,7 @@ export default function Workshop({ data }) {
         },
         {
             name: 'APERISEGNO',
-            copy: 'Un aperitivo sociale, divertente e aperto a tutti. L’unica regola? È obbligatorio comunicare attraverso il linguaggio dei segni LIS.Curato da un team di docenti LIS, che forniranno cartoncini e strumenti utili ad imparare l’ABC della gestualità più espressiva che ci sia.'
+            copy: 'Un aperitivo sociale, divertente e aperto a tutti. L’unica regola? È obbligatorio comunicare attraverso la lingua dei segni LIS.Curato da un team di docenti LIS, che forniranno cartoncini e strumenti utili ad imparare l’ABC della gestualità più espressiva che ci sia.'
         },
         {
             name: 'ACCHIAPPASOGNI',
@@ -179,10 +179,10 @@ export default function Workshop({ data }) {
                         <Col sm={6} ref={textRef1} className='mt-5'>
                             <h2 className=''>Sabato</h2>
                             <ul>
-                                <li>Degustazione con enoteca popolare</li>
-                                <li> Laboratorio per bambini con Keats</li>
+                                <li> Degustazione con enoteca popolare</li>
+                                {/* <li> Laboratorio per bambini con Keats</li> */}
                                 <li> Laboratorio di circo</li>
-                                <li>Laboratorio di cianotipie floreali</li>
+                                <li> Laboratorio di cianotipie floreali</li>
                                 <li> Pet therapy</li>
                                 <li> Xilografia</li>
                             </ul>
@@ -194,10 +194,10 @@ export default function Workshop({ data }) {
                             <h2 className='text-end'>Domenica</h2>
                             <ul className={`${style.directionRtl}`}>
                                 <li className={`${style.liEmbended}`}>Laboratorio di acchiappasogni</li>
-                                <li className={`${style.liEmbended}`}>Opificio imaginarium</li>
-                                <li className={`${style.liEmbended}`}>Laboratorio di acchiappasogni</li>
+                                {/* <li className={`${style.liEmbended}`}>Opificio imaginarium</li> */}
+                                {/* <li className={`${style.liEmbended}`}>Laboratorio di acchiappasogni</li> */}
                                 <li className={`${style.liEmbended}`}>Laboratorio di cianotipie floreali</li>
-                                <li className={`${style.liEmbended}`}>Laboratorio di ”bombe di semi” con Al Löch</li>
+                                <li className={`${style.liEmbended}`}>Laboratorio di ”bombe di semi”</li>
                             </ul>
                             <OffCanvas className={style.btnSpecular} />
                         </Col>

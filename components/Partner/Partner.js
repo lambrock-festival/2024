@@ -43,20 +43,22 @@ export default function Partners({ partners }) {
             */
             swipeable={true}
             draggable={true}
-            showDots={false}
+            showDots={true}
             responsive={responsive}
             ssr={false} // ssr={true} means to render carousel on server-side.
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={500}
+            autoPlaySpeed={1000}
             keyBoardControl={false}
             //customTransition="all 1s linear"
-            transitionDuration={1000}
+            transitionDuration={2000}
             containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            //dotListClass="custom-dot-list-style"
+            /* removeArrowOnDeviceType={["tablet", "mobile"]} */
+            // on mobile not auto play
+            shouldResetAutoplay={false}
+            dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            arrows={false}
+            arrows={true}
         >
             {
                 partners.map((partner, index) => (
@@ -65,7 +67,9 @@ export default function Partners({ partners }) {
                             {
                                 (partner.logo)
                                     ?
-                                    <ExportedImage src={partner.logo} alt={partner.name} width={partner.width} height={partner.height} />
+                                    <ExportedImage src={partner.logo} alt={partner.name} width={partner.width} height={partner.height}
+                                        style={{ marginBottom: '2rem' }}
+                                    />
                                     :
 
                                     <div className={style.outerContainer}>

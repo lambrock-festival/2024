@@ -3,10 +3,10 @@ import { useState } from 'react';
 //import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 // style
-import * as style from '../OffCanvas/OffCanvas.module.scss';
+/* import * as style from '@/OffCanvas/OffCanvas.module.scss'; */
 // image
 import ExportedImage from 'next-image-export-optimizer';
-import qrcode from '../../public/images/qrcode.png'
+import qrcode from '@/public/images/qrcode.png'
 
 export default function OffCanvas({ className }) {
     const [show, setShow] = useState(false);

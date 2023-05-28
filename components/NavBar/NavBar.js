@@ -1,20 +1,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
-// fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 // style
 import s from './NavBar.module.scss';
 // my components
-import { SocialBar } from '../SocialBar'
+// import { SocialBar } from '../SocialBar'
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import lupiWorkshop from '../../public/images/lupi-workshop.png';
-import lupiSocial from '../../public/images/lupo-social.png';
-import logo from '../../public/images/lupo-ponte.jpg';
-import lambrock from '../../public/images/lambrock.png'
-import festival from '../../public/images/festival.png'
-import lf2023 from '../../public/images/2023.png'
+import lupiWorkshop from '@/public/images/lupi-workshop.png';
+import lupiSocial from '@/public/images/lupo-social.png';
+import logo from '@/public/images/lupo-ponte.jpg';
+import lambrock from '@/public/images/lambrock.png'
+import festival from '@/public/images/festival.png'
+import lf2023 from '@/public/images/2023.png'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Col, Row } from 'react-bootstrap';
@@ -88,12 +85,6 @@ export default function NavBar() {
                     </Navbar.Brand>
                     <div style={{ width: '256px' }} className='d-flex justify-content-center'>
                         <i className='fas fa-bars-staggered' style={{ fontSize: '2rem', cursor: 'pointer', zIndex: 1 }} onClick={openNav}></i>
-                        {/* <FontAwesomeIcon
-                            style={{ fontSize: '2rem', cursor: 'pointer', zIndex: 1 }}
-                            icon={faBarsStaggered}
-                            onClick={openNav}
-                            className={`${s.openbtn} mr-3 text-dark text-hover-light`}
-                        /> */}
                         <div id='myNav' className={`${s.overlay}`} style={{ width: `${navWidth}%` }}>
                             <span className={`${s.closebtn}`} onClick={closeNav}>&times;</span>
                             {menuItems.map((item, index) => (

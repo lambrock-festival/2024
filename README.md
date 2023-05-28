@@ -3,4 +3,4 @@
 Sito Web sviluppato con il framework di Node, NextJs.
 
 ## Design 
-![](ARCHITETTURA SITO.pdf)
+![](./ARCHITETTURA%20SITO.pdf)

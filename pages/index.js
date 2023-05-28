@@ -22,11 +22,12 @@ export default function Index() {
         layout='fill'
         objectFit='cover'
         objectPosition='center'
-        priority
         style={{ zIndex: -1 }}
       />
-      {/* "background: #0003"></div> */}
-      <div className="position-fixed w-100 h-100" style={{ background: '#0003' }}></div>
+
+      <div className="position-fixed w-100 h-100" style={{ background: '#0003', zIndex: -1 }}></div>
+
+      {/* LAMBROCK ARCO */}
       <Container>
         <Row className='d-flex align-items-center justify-content-center'>
           <Col
@@ -44,25 +45,30 @@ export default function Index() {
         </Row>
       </Container>
 
-      <Container fluid className='mb-5' zIndex={1}>
+      {/* DATE */}
+      <Container fluid className='mb-5' /* style={{ zIndex: 1 }} */>
+
+        {/* DATE */}
         <Row className='mb-5 d-flex align-items-center justify-content-center text-center'>
           <Col sm={12}>
             <h2 className={s.date}>Giugno <span>16/17/18</span></h2>
           </Col>
         </Row>
+
+        {/* BUTTON */}
         <Row className='d-flex align-items-center justify-content-center text-center'>
-          <Link href='/home' className={s.btn}>
+          <Link href='home' className={s.btn}>
             Entra nella tana del lupo
           </Link>
         </Row>
+
+        {/* COUNTDOWN */}
+        <Row className='d-flex'>
+          <Col style={{ zIndex: -1 }} sm={12}>
+            <Countdown />
+          </Col>
+        </Row>
       </Container>
-
-      <Row className='d-flex'>
-        <Col sm={12}>
-          <Countdown />
-        </Col>
-      </Row>
-
 
     </>
   );

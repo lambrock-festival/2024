@@ -72,7 +72,6 @@ export default function Countdown() {
                     (this.values.minutes * 60)
                     +
                     (this.values.seconds);
-                console.log(this);
                 // Animate countdown to the end 
                 this.count();
             },
@@ -132,7 +131,7 @@ export default function Countdown() {
                     else {
                         clearInterval(that.countdown_interval);
                     }
-                }, 1000);
+                }, 500);
             },
 
             animateFigure: function ($el, value) {

@@ -1,17 +1,15 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faFacebookF, faGoogle, faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { faHome, faAddressCard, faEnvelope, faPhone, faDownload, faLink } from '@fortawesome/free-solid-svg-icons';
 //import Image from 'next/image';
 import * as s from './Footer.module.scss'
 import Link from 'next/link';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import fb from '../../public/images/icons/fb.png';
-import ig from '../../public/images/icons/ig.png';
-import tg from '../../public/images/icons/tg.png';
-import mail from '../../public/images/icons/mail.png';
-
+import fb from '@/public/images/icons/fb.png';
+import ig from '@/public/images/icons/ig.png';
+import tg from '@/public/images/icons/tg.png';
+import mail from '@/public/images/icons/mail.png';
 
 export default function Footer() {
     return (
@@ -74,7 +72,7 @@ export default function Footer() {
                             {/* <FontAwesomeIcon icon={faLink} className='me-3' /> */}
                             links utili
                         </h6>
-                        <ul className=''>
+                        <ul style={{ listStyle: 'none' }} className='p-0'>
                             <li className='mb-2'>
                                 <Link href='/home' className='text-reset'>Home</Link>
                             </li>

@@ -1,12 +1,11 @@
 import styles from './SocialBar.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faTelegram, faGoogle } from '@fortawesome/free-brands-svg-icons';
+// import { faFacebookF, faInstagram, faTelegram, faGoogle } from '@fortawesome/free-brands-svg-icons';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import fb from '../../public/images/icons/fb.png';
-import ig from '../../public/images/icons/ig.png';
-import tg from '../../public/images/icons/tg.png';
-import mail from '../../public/images/icons/mail.png';
+import fb from '@/public/images/icons/fb.png';
+import ig from '@/public/images/icons/ig.png';
+import tg from '@/public/images/icons/tg.png';
+import mail from '@/public/images/icons/mail.png';
 
 export default function SocialBar() {
     const socialMedia = [

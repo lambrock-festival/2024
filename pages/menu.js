@@ -18,7 +18,7 @@ export default function Menu({ data }) {
         <>
             <Template>
                 <div className='mb-5' style={{
-                    position: 'relative', height: '75vh', '@media (max-width: 768px)': {
+                    position: 'relative', height: '75vh', '@media (maxWidth: 768px)': {
                         height: '55vh',
                     },
                 }}>
@@ -35,7 +35,7 @@ export default function Menu({ data }) {
                 <Container className='mt-5'>
                     <Row className='mt-5 text-center'>
                         <p>
-                            Cosa bolle in pentola? Gustati il menù più lupesc* della brianza: street food per eccellenza, con tutta la bontà dei prodotti della nostra tradizione locale. Una selezione di piatti e sfiziosità in stile lambrock, per sostenere l'artigianato alimentare del territorio.
+                            Cosa bolle in pentola? Gustati il menù più lupesco della brianza: street food per eccellenza, con tutta la bontà dei prodotti della nostra tradizione locale. Una selezione di piatti e sfiziosità in stile lambrock, per sostenere l'artigianato alimentare del territorio.
                         </p>
                         {/* <ReactMarkdown>{data.content}</ReactMarkdown> */}
                         <hr />
@@ -55,6 +55,7 @@ export default function Menu({ data }) {
                             src={locandinaMenu}
                             alt="mappa"
                             layout='responsive'
+                            priority
                         />
                         {/* <Book /> */}
                     </Col>

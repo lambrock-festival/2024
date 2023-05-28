@@ -1,9 +1,9 @@
-@import './fonts/Oswald.css';
-@import './fonts/Montserrat.css';
-@import './fonts/Advent.css';
-@import './fonts/NoMoreLies.css';
+@import '@/styles/fonts/Oswald.css';
+@import '@/styles/fonts/Montserrat.css';
+@import '@/styles/fonts/Advent.css';
+@import '@/styles/fonts/NoMoreLies.css';
 
-@import './custom.bootstrap.scss';
+@import '@/styles/custom.bootstrap.scss';
 //@import "compass/css3";
 
 * {
@@ -72,14 +72,14 @@ ol {
     }
 }
 
-.cursor {
+/* .cursor {
     width: 20px;
     height: 20px;
     //border: 1px solid white;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
-    background-image: url("cursore.png");
+    //background-image: url("cursore.png");
 }
 
 .cursor::after {
@@ -113,6 +113,7 @@ ol {
 .expand {
     animation: cursorAnim .5s forwards;
 }
+ */
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */

@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 // bootstrap
 import { Container, Row, Col } from 'react-bootstrap';
 // styles
-/*import style from '@/styles/Associazione.module.scss';*/
+// import style from '@/styles/Associazione.module.scss';
 import 'animate.css';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';

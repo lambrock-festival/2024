@@ -41,5 +41,11 @@
     "swiper-react": "^1.0.0",
     "use-ssr": "^1.0.25",
     "yarn": "^1.22.19"
-  }
+  },
+  "name": "2023",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lambrock-festival/2022.git",
+  "author": "DiMo <stefdimodugno@gmail.com>",
+  "license": "MIT"
 }
