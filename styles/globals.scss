@@ -1,8 +1,10 @@
+// font
 @import '@/styles/fonts/Oswald.css';
 @import '@/styles/fonts/Montserrat.css';
 @import '@/styles/fonts/Advent.css';
 @import '@/styles/fonts/NoMoreLies.css';
 
+// bootstrap
 @import '@/styles/custom.bootstrap.scss';
 //@import "compass/css3";
 
@@ -72,7 +74,8 @@ ol {
     }
 }
 
-/* .cursor {
+/* 
+.cursor {
     width: 20px;
     height: 20px;
     //border: 1px solid white;
@@ -113,7 +116,7 @@ ol {
 .expand {
     animation: cursorAnim .5s forwards;
 }
- */
+*/
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -180,8 +183,7 @@ ol {
     padding: 20px;
 }
 
-// Countdown //////////////////////////////////////////////////////////////////
-
+/* ===== Countdown ===== */
 
 .countdown {
 
@@ -192,6 +194,14 @@ ol {
 
         &:last-child {
             margin-right: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .bloc-time {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 20px;
         }
     }
 
@@ -229,8 +239,8 @@ ol {
             left: 0;
             right: 0;
             margin: auto;
-            font: normal 5.94em/107px 'Lato';
-            font-weight: 700;
+            font: normal 5.94em/107px 'NoMoreLies';
+            font-weight: 500;
             color: #de4848;
         }
 

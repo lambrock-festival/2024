@@ -1,10 +1,7 @@
 .container {
     font-family: 'Oswald', sans-serif;
     width: fit-content;
-    height: 300px;
     position: relative;
-    bottom: 0;
-    left: 25%;
 }
 
 .content {
@@ -24,7 +21,6 @@
         color: #E95280;
         text-shadow: 0 0 10px rgba(119, 119, 119, 0.801);
         font-size: 35px;
-        //stroke: #000;
         -webkit-text-stroke: 1px black;
         -moz-text-strokes: 1px black;
     }
@@ -32,14 +28,6 @@
 
 .content h1 span {
     color: #E95280;
-    //stroke: 1px black;
-    //-webkit-text-stroke: 1px black;
-}
-
-
-.lupifalocol {
-    object-fit: fixed;
-    object-position: center;
 }
 
 .date {
@@ -51,9 +39,3 @@
         color: #f6bbc6;
     }
 }
-
-/*
-@media only screen and (max-width: 768px) {}
-
-@media only screen and (max-width: 480px) {} 
-*/

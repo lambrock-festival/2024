@@ -198,127 +198,119 @@ export default function Countdown() {
 
     return (
         <>
+            <div className='wrap'>
+                <div className='countdown mt-5 '>
 
-            <div className={s.all}>
-                <div className={s.container}>
-                    <div className={s.content}>
-                        <div className='wrap'>
-                            <div className='countdown mt-5 '>
+                    {/* Days */}
+                    <div className='bloc-time days' data-init-value='0'>
+                        <span className='count-title'>Giorni</span>
 
-                                {/* Days */}
-                                <div className='bloc-time days' data-init-value='0'>
-                                    <span className='count-title'>Giorni</span>
+                        <div className='figure days days-1'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
 
-                                    <div className='figure days days-1'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-
-                                    <div className='figure days days-2'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Hours */}
-                                <div className='bloc-time hours' data-init-value='0'>
-                                    <span className='count-title'>Ore</span>
-
-                                    <div className='figure hours hours-1'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-
-                                    <div className='figure hours hours-2'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Minutes */}
-                                <div className='bloc-time min' data-init-value='0'>
-                                    <span className='count-title'>Minuti</span>
-
-                                    <div className='figure min min-1'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-
-                                    <div className='figure min min-2'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Second */}
-                                <div className='bloc-time sec' data-init-value='0'>
-                                    <span className='count-title'>Secondi</span>
-
-                                    <div className='figure sec sec-1'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-
-                                    <div className='figure sec sec-2 mb-5'>
-                                        <span className='top'>0</span>
-                                        <span className='top-back'>
-                                            <span>0</span>
-                                        </span>
-                                        <span className='bottom'>0</span>
-                                        <span className='bottom-back'>
-                                            <span>0</span>
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </div>
+                        <div className='figure days days-2'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
                         </div>
                     </div>
+
+                    {/* Hours */}
+                    <div className='bloc-time hours' data-init-value='0'>
+                        <span className='count-title'>Ore</span>
+
+                        <div className='figure hours hours-1'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
+
+                        <div className='figure hours hours-2'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Minutes */}
+                    <div className='bloc-time min' data-init-value='0'>
+                        <span className='count-title'>Minuti</span>
+
+                        <div className='figure min min-1'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
+
+                        <div className='figure min min-2'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Second */}
+                    <div className='bloc-time sec' data-init-value='0'>
+                        <span className='count-title'>Secondi</span>
+
+                        <div className='figure sec sec-1'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
+
+                        <div className='figure sec sec-2 mb-5'>
+                            <span className='top'>0</span>
+                            <span className='top-back'>
+                                <span>0</span>
+                            </span>
+                            <span className='bottom'>0</span>
+                            <span className='bottom-back'>
+                                <span>0</span>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
         </>
     );
 }

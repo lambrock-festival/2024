@@ -25,28 +25,28 @@ export default function Index() {
         style={{ zIndex: -1 }}
       />
 
+      {/* background overlay */}
       <div className="position-fixed w-100 h-100" style={{ background: '#0003', zIndex: -1 }}></div>
 
-      {/* LAMBROCK ARCO */}
-      <Container>
-        <Row className='d-flex align-items-center justify-content-center'>
-          <Col
-            xs={{ span: 20, order: 1 }}
-            sm={{ span: 12, order: 1 }}
-          >
-            <ExportedImage
-              src={lambrockarco}
-              layout='responsive'
-              alt='LambrockArco'
-              className={s.lambrockarco}
-              priority
-            />
-          </Col>
-        </Row>
-      </Container>
-
-      {/* DATE */}
       <Container fluid className='mb-5' /* style={{ zIndex: 1 }} */>
+
+        {/* LAMBROCK ARCO */}
+        <Container>
+          <Row className='d-flex align-items-center justify-content-center'>
+            <Col
+              xs={{ span: 20, order: 1 }}
+              sm={{ span: 12, order: 1 }}
+            >
+              <ExportedImage
+                src={lambrockarco}
+                layout='responsive'
+                alt='LambrockArco'
+                className={s.lambrockarco}
+                priority
+              />
+            </Col>
+          </Row>
+        </Container>
 
         {/* DATE */}
         <Row className='mb-5 d-flex align-items-center justify-content-center text-center'>
@@ -63,11 +63,12 @@ export default function Index() {
         </Row>
 
         {/* COUNTDOWN */}
-        <Row className='d-flex'>
-          <Col style={{ zIndex: -1 }} sm={12}>
+        <Row>
+          <Col sm={12} className='d-flex align-items-center justify-content-center'>
             <Countdown />
           </Col>
         </Row>
+
       </Container>
 
     </>
