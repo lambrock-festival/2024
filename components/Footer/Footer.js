@@ -10,6 +10,7 @@ import fb from '@/public/images/icons/fb.png';
 import ig from '@/public/images/icons/ig.png';
 import tg from '@/public/images/icons/tg.png';
 import mail from '@/public/images/icons/mail.png';
+import mdv from '@/public/images/icons/mdv.png';
 
 export default function Footer() {
     return (
@@ -17,7 +18,7 @@ export default function Footer() {
             <div className='container py-5'>
                 <div className='row justify-content-between align-items-center mb-4'>
                     <div className={`col-12 d-flex justify-content-center ${s.zoom}`}>
-                        <a href='https://www.facebook.com/lambrockfestival' className='me-4'>
+                        <a href='https://www.facebook.com/lambrockfestival' target='_blank' className='me-4 ml-5'>
                             <ExportedImage
                                 src={fb}
                                 alt="fb"
@@ -26,7 +27,7 @@ export default function Footer() {
                                 height={110}
                             />
                         </a>
-                        <a href='mailto:lambrockfest@gmail.com' className='me-4'>
+                        <a href='mailto:lambrockfest@gmail.com' target='_blank' className='me-4'>
                             <ExportedImage
                                 src={mail}
                                 alt="mail"
@@ -35,7 +36,7 @@ export default function Footer() {
                                 height={110}
                             />
                         </a>
-                        <a href='https://instagram.com/_u/lambrockfestival/' className='me-4'>
+                        <a href='https://instagram.com/_u/lambrockfestival/' target='_blank' className='me-4'>
                             <ExportedImage
                                 src={ig}
                                 alt="ig"
@@ -44,12 +45,21 @@ export default function Footer() {
                                 height={110}
                             />
                         </a>
-                        <a href='https://t.me/lambrockfestival' className='me-4'>
+                        <a href='https://t.me/lambrockfestival' target='_blank' className='me-4'>
                             <ExportedImage
                                 src={tg}
                                 alt="tg"
                                 //layout="fixed"
                                 width={110}
+                                height={110}
+                            />
+                        </a>
+                        <a href='https://mondodelleuova.it' target='_blank' className='me-4 ml-5'>
+                            <ExportedImage
+                                src={mdv}
+                                alt="mdv"
+                                //layout="fixed"
+                                width={90}
                                 height={110}
                             />
                         </a>

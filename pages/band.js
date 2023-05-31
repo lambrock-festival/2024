@@ -7,7 +7,7 @@ import * as s from '@/styles/Band.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import locandinaBand from '@/public/images/locandina-band.jpg'
+import locandinaBand from '@/public/images/locandina-band.png'
 import lupofalosx from '@/public/images/lupi-falo-neri-sx.png'
 import lupofalodx from '@/public/images/lupi-falo-neri-dx.png'
 import copertina from '@/public/images/bandcopertina.jpg'

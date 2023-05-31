@@ -5,6 +5,8 @@ import 'react-multi-carousel/lib/styles.css';
 import style from './Partner.module.scss';
 
 export default function Partners({ partners }) {
+    // if is mobile not auto play check before window existance
+    const autoplay = (typeof window !== 'undefined' && window.innerWidth > 768) ? true : false;
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -47,7 +49,7 @@ export default function Partners({ partners }) {
             responsive={responsive}
             ssr={false} // ssr={true} means to render carousel on server-side.
             infinite={true}
-            autoPlay={true}
+            autoPlay={autoplay}
             autoPlaySpeed={1000}
             keyBoardControl={false}
             //customTransition="all 1s linear"
@@ -67,8 +69,8 @@ export default function Partners({ partners }) {
                             {
                                 (partner.logo)
                                     ?
-                                    <ExportedImage src={partner.logo} alt={partner.name} width={partner.width} height={partner.height}
-                                        style={{ marginBottom: '2rem' }}
+                                    <ExportedImage src={partner.logo} alt={partner.name} /* width={partner.width} height={partner.height} */ layout='responsive'
+                                        style={{ marginBottom: '2rem', marginRight: '2rem', padding: '0 1rem' }}
                                     />
                                     :
 
