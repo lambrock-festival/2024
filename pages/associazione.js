@@ -10,10 +10,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'animate.css';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/associazione-copertina.jpg'
-import storia from '@/public/images/storia.jpg'
-import maniPiante from '@/public/images/mani-piante.jpg'
-import valori from '@/public/images/valori.jpg'
+import copertina from '@/public/images/associazione-copertina.webp'
+import storia from '@/public/images/storia.webp'
+import maniPiante from '@/public/images/mani-piante.webp'
+import valori from '@/public/images/valori.webp'
 
 const onElementVisibleRight = (entry) => {
     if (window.innerWidth > 768) {

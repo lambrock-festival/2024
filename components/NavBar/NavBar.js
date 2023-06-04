@@ -6,12 +6,12 @@ import s from './NavBar.module.scss';
 // import { SocialBar } from '../SocialBar'
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import lupiWorkshop from '@/public/images/lupi-workshop.png';
-import lupiSocial from '@/public/images/lupo-social.png';
-import logo from '@/public/images/lupo-ponte.jpg';
-import lambrock from '@/public/images/lambrock.png'
-import festival from '@/public/images/festival.png'
-import lf2023 from '@/public/images/2023.png'
+import lupiWorkshop from '@/public/images/lupi-workshop.webp';
+import lupiSocial from '@/public/images/lupo-social.webp';
+import logo from '@/public/images/lupo-ponte.webp';
+import lambrock from '@/public/images/lambrock.webp'
+import festival from '@/public/images/festival.webp'
+import lf2023 from '@/public/images/2023.webp'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Col, Row } from 'react-bootstrap';

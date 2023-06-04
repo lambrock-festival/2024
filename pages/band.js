@@ -1,3 +1,10 @@
+/*
+    TODO: 
+        togliere lupi qui e anche ws
+        rinpicciolire home
+        aggiungere animazioni mancanti
+        convertire ultime foto in webp
+*/
 // template
 import { getPageMD } from '@/utils/load-md';
 import { Template } from '@/components/Templates';
@@ -7,22 +14,22 @@ import * as s from '@/styles/Band.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import locandinaBand from '@/public/images/locandina-band.png'
-import lupofalosx from '@/public/images/lupi-falo-neri-sx.png'
-import lupofalodx from '@/public/images/lupi-falo-neri-dx.png'
-import copertina from '@/public/images/bandcopertina.jpg'
+import locandinaBand from '@/public/images/locandina-band.webp'
+import lupofalosx from '@/public/images/lupi-falo-neri-sx.webp'
+import lupofalodx from '@/public/images/lupi-falo-neri-dx.webp'
+import copertina from '@/public/images/bandcopertina.webp'
 // artists
 import Partners from '@/components/Partner/Partner';
-import meg from '@/public/images/artisti/meg.png'
-import crema from '@/public/images/artisti/crema.png'
-import latigre from '@/public/images/artisti/latigre.png'
-import hornytoorinchos from '@/public/images/artisti/hornytoorinchos.png'
-import twerkit from '@/public/images/artisti/twerkit.png'
-import genericanimal from '@/public/images/artisti/genericanimal.png'
-import delicottero from '@/public/images/artisti/delicottero.png'
-import aftersalsa from '@/public/images/artisti/aftersalsa.png'
-import cheriachre from '@/public/images/artisti/cheriachre.png'
-import montag from '@/public/images/artisti/montag.png'
+import meg from '@/public/images/artisti/meg.webp'
+import crema from '@/public/images/artisti/crema.webp'
+import latigre from '@/public/images/artisti/latigre.webp'
+import hornytoorinchos from '@/public/images/artisti/hornytoorinchos.webp'
+import twerkit from '@/public/images/artisti/twerkit.webp'
+import genericanimal from '@/public/images/artisti/genericanimal.webp'
+import delicottero from '@/public/images/artisti/delicottero.webp'
+import aftersalsa from '@/public/images/artisti/aftersalsa.webp'
+import cheriachre from '@/public/images/artisti/cheriachre.webp'
+import montag from '@/public/images/artisti/montag.webp'
 
 export default function Band({ data }) {
     const partners = [
@@ -93,10 +100,6 @@ export default function Band({ data }) {
                     </Col>
                 </Row>
 
-                {/* Carosello BAND */}
-                <Row className='m-2 mt-5'>
-                    <Partners className='mt-5' partners={partners} />
-                </Row>
 
                 <Container>
                     <Row className='text-center mb-5'>
@@ -109,6 +112,12 @@ export default function Band({ data }) {
 
                     </Row>
                 </Container>
+
+                {/* Carosello BAND */}
+                <Row className='m-2 mt-5'>
+                    <Partners className='mt-5' partners={partners} />
+                </Row>
+
             </Template >
         </>
     );

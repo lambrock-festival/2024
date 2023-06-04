@@ -10,9 +10,9 @@ import * as style from '@/styles/Workshop.module.scss';
 import 'animate.css';
 // image 
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/workshopcopertina.jpg'
-import workshopBox from '@/public/images/workshopbox.jpg'
-import workshopBox2 from '@/public/images/workshopbox2.jpg'
+import copertina from '@/public/images/workshopcopertina.webp'
+import workshopBox from '@/public/images/workshopbox.webp'
+import workshopBox2 from '@/public/images/workshopbox2.webp'
 import { OffCanvas } from '@/components/OffCanvas';
 import Partners from '@/components/Partner/Partner';
 

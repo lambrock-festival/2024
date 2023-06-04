@@ -3,7 +3,7 @@ import $ from 'jquery';
 // react
 import { useEffect } from 'react';
 // style
-import * as s from './Countdown.module.scss';
+//import * as s from './Countdown.module.scss';
 // animation
 import { TweenMax, Quart } from 'gsap';
 

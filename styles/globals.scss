@@ -82,7 +82,7 @@ ol {
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
-    //background-image: url("cursore.png");
+    //background-image: url("cursore.webp");
 }
 
 .cursor::after {
@@ -95,7 +95,7 @@ ol {
     opacity: .5;
     top: -8px;
     left: -8px;
-    //background-image: url("cursore.png");
+    //background-image: url("cursore.webp");
 }
 
 @keyframes cursorAnim {

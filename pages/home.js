@@ -10,12 +10,12 @@ import style from '@/styles/Home.module.scss';
 import 'animate.css';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import workshop from '@/public/images/workshop.png'
-import lineup from '@/public/images/lineup.png'
-import food from '@/public/images/food.png'
-import ws from '@/public/images/icons/ws.png'
-import musica from '@/public/images/icons/musica.png'
-import cibo from '@/public/images/icons/cibo.png'
+import workshop from '@/public/images/workshop.webp'
+import lineup from '@/public/images/lineup.webp'
+import food from '@/public/images/food.webp'
+import ws from '@/public/images/icons/ws.webp'
+import musica from '@/public/images/icons/musica.webp'
+import cibo from '@/public/images/icons/cibo.webp'
 import Link from 'next/link';
 
 export default function Home({ data }) {

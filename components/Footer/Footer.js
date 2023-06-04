@@ -6,11 +6,11 @@ import * as s from './Footer.module.scss'
 import Link from 'next/link';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import fb from '@/public/images/icons/fb.png';
-import ig from '@/public/images/icons/ig.png';
-import tg from '@/public/images/icons/tg.png';
-import mail from '@/public/images/icons/mail.png';
-import mdv from '@/public/images/icons/mdv.png';
+import fb from '@/public/images/icons/fb.webp';
+import ig from '@/public/images/icons/ig.webp';
+import tg from '@/public/images/icons/tg.webp';
+import mail from '@/public/images/icons/mail.webp';
+import mdv from '@/public/images/icons/mdv.webp';
 
 export default function Footer() {
     return (

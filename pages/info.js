@@ -9,9 +9,9 @@ import * as s from '@/styles/Info.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/contatti-copertina.jpg'
-import lupobar from '@/public/images/lupi-volontari.png'
-import mappa from '@/public/images/mappa.png'
+import copertina from '@/public/images/contatti-copertina.webp'
+import lupobar from '@/public/images/lupi-volontari.webp'
+import mappa from '@/public/images/mappa.webp'
 
 export default function Info({ data }) {
     const [name, setName] = useState('');

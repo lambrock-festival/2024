@@ -7,8 +7,8 @@ import { Container, Col, Row } from 'react-bootstrap';
 import * as s from '@/styles/Index.module.scss';
 //image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import lambrockarco from '@/public/images/lambrockarco.png'
-import lupiFalo from '@/public/images/lupiFalo.png'
+import lambrockarco from '@/public/images/lambrockarco.webp'
+import lupiFalo from '@/public/images/lupiFalo.webp'
 
 export default function Index() {
   return (

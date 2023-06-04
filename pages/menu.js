@@ -7,11 +7,11 @@ import * as s from '@/styles/Menu.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/cibo-copertina.jpg'
-import locandinaMenu from '@/public/images/locandina-menu.png'
-import lupofalosx from '@/public/images/lupi-falo-neri-sx.png'
-import lupofalodx from '@/public/images/lupi-falo-neri-dx.png'
-import borraccia from '@/public/images/borraccia.png'
+import copertina from '@/public/images/cibo-copertina.webp'
+import locandinaMenu from '@/public/images/locandina-menu.webp'
+import lupofalosx from '@/public/images/lupi-falo-neri-sx.webp'
+import lupofalodx from '@/public/images/lupi-falo-neri-dx.webp'
+import borraccia from '@/public/images/borraccia.webp'
 
 export default function Menu({ data }) {
     return (
