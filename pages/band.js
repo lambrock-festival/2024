@@ -1,9 +1,7 @@
 /*
     TODO: 
         togliere lupi qui e anche ws
-        rinpicciolire home
         aggiungere animazioni mancanti
-        convertire ultime foto in webp
 */
 // template
 import { getPageMD } from '@/utils/load-md';

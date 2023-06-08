@@ -146,7 +146,7 @@ export default function Home({ data }) {
 
                 <Container className='mt-5'>
                     <Row className='mt-5'>
-                        <Col sm={8} ref={lineUpRefLeft} className='mb-5'>
+                        <Col sm={6} ref={lineUpRefLeft} className='mb-5'>
                             <ExportedImage src={lineup} alt="lupo-band" width={1080} height={720} />
                         </Col>
                         <Col ref={lineUpRefRight} sm={4} className='mt-5'>
@@ -181,7 +181,7 @@ export default function Home({ data }) {
                     </Row>
 
                     <Row className='mt-5'>
-                        <Col sm={8} ref={foodRefLeft} className='mb-5'>
+                        <Col sm={6} ref={foodRefLeft} className='mb-5'>
                             <ExportedImage src={food} alt="lupo-cibo" layout="responsive" />
                         </Col>
                         <Col ref={foodRefRight} sm={4} className='mt-5'>
