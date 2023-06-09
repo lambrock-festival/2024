@@ -1,13 +1,11 @@
-/*
-    TODO: 
-        togliere lupi qui e anche ws
-        aggiungere animazioni mancanti
-*/
 // template
 import { getPageMD } from '@/utils/load-md';
 import { Template } from '@/components/Templates';
 // style
 import * as s from '@/styles/Band.module.scss';
+import 'animate.css/animate.min.css';
+//react 
+import { useEffect, useRef } from 'react';
 // bootstrap
 import { Col, Container, Row } from 'react-bootstrap';
 // image
@@ -42,6 +40,77 @@ export default function Band({ data }) {
         { name: 'cheriachre', logo: cheriachre, width: 500, height: 500 },
         { name: 'montag', logo: montag, width: 500, height: 500 },
     ];
+    
+    const onElementVisibleLeft = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInLeft');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const onElementVisibleRight = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInRight');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const onElementVisibleUp = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInUp');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const col1Ref = useRef(null);
+    const col2Ref = useRef(null);
+    const col3Ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === col1Ref.current) {
+                            onElementVisibleLeft(entry);
+                        } else if (entry.target === col2Ref.current) {
+                            onElementVisibleUp(entry);
+                        } else if (entry.target === col3Ref.current) {
+                            onElementVisibleRight(entry);
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+            }
+        );
+
+        if (col1Ref.current) {
+            observer.observe(col1Ref.current);
+            col1Ref.current.style.visibility = 'hidden';
+        }
+
+        if (col2Ref.current) {
+            observer.observe(col2Ref.current);
+            col2Ref.current.style.visibility = 'hidden';
+        }
+
+        if (col3Ref.current) {
+            observer.observe(col3Ref.current);
+            col3Ref.current.style.visibility = 'hidden';
+        }
+
+        return () => {
+            if (col1Ref.current) {
+                observer.unobserve(col1Ref.current);
+            }
+
+            if (col2Ref.current) {
+                observer.unobserve(col2Ref.current);
+            }
+
+            if (col3Ref.current) {
+                observer.unobserve(col3Ref.current);
+            }
+        };
+    }, []);
+
     return (
         <>
             <Template>
@@ -73,7 +142,7 @@ export default function Band({ data }) {
                     </Row>
                 </Container>
                 <Row className='m-2 mt-5 text-align-center'>
-                    <Col sm={4}>
+                    <Col sm={4} className="d-none d-md-block" ref={col1Ref}>
                         <ExportedImage
                             src={lupofalosx}
                             layout='responsive'
@@ -81,14 +150,14 @@ export default function Band({ data }) {
                             className={s.lupifalocol}
                         />
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='mt-5' ref={col2Ref}>
                         <ExportedImage
                             src={locandinaBand}
-                            alt="mappa"
+                            alt="locandina"
                             layout='responsive'
                         />
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='mt-5 d-none d-md-block' ref={col3Ref}>
                         <ExportedImage
                             src={lupofalodx}
                             layout='responsive'
@@ -129,206 +198,3 @@ export async function getStaticProps() {
         },
     };
 }
-
-/* 
-import { getPageMD } from '../utils/load-md';
-import ReactMarkdown from 'react-markdown';
-import { Template } from '../components/Templates';
-import { Col, Container, Row } from 'react-bootstrap';
-import * as s from '../styles/Band.module.scss';
-
-export default function Band({ data }) {
-
-    const schedule = [
-        {
-            day: {
-                date: 'Venerdì 15',
-                artists: [
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                ]
-            },
-        },
-        {
-            day: {
-                date: 'Sabato 16',
-                artists: [
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                ],
-            },
-        },
-        {
-            day: {
-                date: 'Domenica 17',
-                artists: [
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                    {
-                        name: 'iFinnegans',
-                        spotifyId: '2rrjc6ARdFy4OigHtVsL7X?utm_source=generator'
-                    },
-                ],
-            },
-        },
-    ];
-
-    const columns = (
-        <>
-            {schedule.map((item, index) => (
-                <Col sm={4} key={`col-${index}`}>
-                    <h1 className='mt-5' key={`header-${index}`}>{item.day.date}</h1>
-                    <ul key={`ul-${index}`}>
-                        {item.day.artists.map((artist, artistIndex) => (
-                            <li key={`${index}-${artistIndex}`} className={s.li}>
-                                <h3 key={`name-${artistIndex}`}>{artist.name}</h3>
-                                <button className={s.btn} data-spotify-id={artist.spotifyId} key={`button-${artistIndex}`}>
-                                    <div id='embed-iframe' className={s.embed_iframe}>
-                                        <iframe
-                                            src={`https://open.spotify.com/embed/artist/${artist.spotifyId}`}
-                                            width='600'
-                                            height='100'
-                                            frameBorder='0'
-                                            allowtransparency='true'
-                                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                                            loading="lazy"
-                                            key={`iframe-${artistIndex}`}
-                                        ></iframe>
-                                    </div>
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </Col>
-            ))}
-        </>
-    );
-
-    return (
-        <Template>
-            <img
-                src='/2023/lupo_vettoriale_bianco-su-nero.svg'
-                alt='Lupo'
-                className={s.img}
-            />
-            <Container className='mt-5'>
-                <Row className='m-0 mt-5'>
-                    <Col>
-                        <ReactMarkdown>{data.content}</ReactMarkdown>
-                        <hr />
-                        <img
-                            src='/2023/lupo_vettoriale_bianco-su-nero.svg'
-                            alt='Lupo'
-                            className={s.img}
-                        />
-                    </Col>
-                </Row>
-            </Container>
-            <Container className='mb-5'>
-                <Row>
-                    {columns}
-                </Row>
-                <img
-                    src='/2023/lupo_vettoriale_bianco-su-nero.svg'
-                    alt='carosello'
-                    className={s.img}
-                />
-            </Container>
-            <img
-                src='/2023/lupo_vettoriale_bianco-su-nero.svg'
-                alt='Lupo'
-                className={s.img}
-            />
-        </Template>
-    );
-} 
-*/
-
-/* 
-    useEffect(() => {
-        // eslint-disable 
-        (function () {
-            // var scriptUrl = 'https://open.spotifycdn.com/cdn/build/embed-iframe-api-v1.c3632ddf.js';
-            var scriptUrl = 'js/lib/spotify.js';
-            var host = 'https://open.spotify.com';
-            try {
-                var ttPolicy = window.trustedTypes.createPolicy('spotify-embed-api', {
-                    createScriptURL: function (x) {
-                        return x;
-                    },
-                });
-                scriptUrl = ttPolicy.createScriptURL(scriptUrl);
-            } catch (e) { }
-
-            if (!window.SpotifyIframeConfig) {
-                window.SpotifyIframeConfig = {};
-            }
-            SpotifyIframeConfig.host = host;
-
-            if (SpotifyIframeConfig.loading) {
-                console.warn('The Spotify Iframe API has already been initialized.');
-                return;
-            }
-            SpotifyIframeConfig.loading = 1;
-
-            var a = document.createElement('script');
-            a.type = 'text/javascript';
-            a.id = 'spotify-iframeapi-script';
-            a.src = scriptUrl;
-            a.async = true;
-            var c = document.currentScript;
-            if (c) {
-                var n = c.nonce || c.getAttribute('nonce');
-                if (n) a.setAttribute('nonce', n);
-            }
-            var b = document.getElementsByTagName('script')[0];
-            b.parentNode.insertBefore(a, b);
-        })();
-        if (typeof window !== 'undefined') {
-            window.onSpotifyIframeApiReady = (IFrameAPI) => {
-                let element = document.getElementById('embed-iframe');
-                let options = {
-                    uri: 'spotify:artist:2rrjc6ARdFy4OigHtVsL7X?si=r-lyajiARZKApzhHqoq-CQ',
-                    width: '60%',
-                    //height: '700',
-                };
-                let callback = (EmbedController) => {
-                    document.querySelectorAll('ul#episodes > li > button').forEach(
-                        episode => {
-                            episode.addEventListener('click', () => {
-                                EmbedController.loadUri(episode.dataset.spotifyId)
-                            });
-                        },
-                    );
-                };
-                IFrameAPI.createController(element, options, callback);
-            };
-        }
-    }, []); 
-*/

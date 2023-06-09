@@ -3,6 +3,9 @@ import { getPageMD } from '@/utils/load-md';
 import { Template } from '@/components/Templates';
 // style
 import * as s from '@/styles/Menu.module.scss';
+import 'animate.css/animate.min.css';
+//react 
+import { useEffect, useRef } from 'react';
 // bootstrap
 import { Col, Container, Row } from 'react-bootstrap';
 // image
@@ -14,6 +17,76 @@ import lupofalodx from '@/public/images/lupi-falo-neri-dx.webp'
 import borraccia from '@/public/images/borraccia.webp'
 
 export default function Menu({ data }) {
+    const onElementVisibleLeft = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInLeft');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const onElementVisibleRight = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInRight');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const onElementVisibleUp = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInUp');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const col1Ref = useRef(null);
+    const col2Ref = useRef(null);
+    const col3Ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === col1Ref.current) {
+                            onElementVisibleLeft(entry);
+                        } else if (entry.target === col2Ref.current) {
+                            onElementVisibleUp(entry);
+                        } else if (entry.target === col3Ref.current) {
+                            onElementVisibleRight(entry);
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+            }
+        );
+
+        if (col1Ref.current) {
+            observer.observe(col1Ref.current);
+            col1Ref.current.style.visibility = 'hidden';
+        }
+
+        if (col2Ref.current) {
+            observer.observe(col2Ref.current);
+            col2Ref.current.style.visibility = 'hidden';
+        }
+
+        if (col3Ref.current) {
+            observer.observe(col3Ref.current);
+            col3Ref.current.style.visibility = 'hidden';
+        }
+
+        return () => {
+            if (col1Ref.current) {
+                observer.unobserve(col1Ref.current);
+            }
+
+            if (col2Ref.current) {
+                observer.unobserve(col2Ref.current);
+            }
+
+            if (col3Ref.current) {
+                observer.unobserve(col3Ref.current);
+            }
+        };
+    }, []);
+
     return (
         <>
             <Template>
@@ -41,8 +114,8 @@ export default function Menu({ data }) {
                         <hr />
                     </Row>
                 </Container>
-                <Row className='m-2 mt-5 text-align-center'>
-                    <Col className='mt-5' sm={4}>
+                <Row className='m-2 mt-5 mb-5 text-align-center'>
+                    <Col sm={4} className='d-none d-md-block' ref={col1Ref}>
                         <ExportedImage
                             src={lupofalosx}
                             layout='responsive'
@@ -50,16 +123,16 @@ export default function Menu({ data }) {
                             className={s.lupifalocol}
                         />
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='mt-5' ref={col2Ref}>
                         <ExportedImage
                             src={locandinaMenu}
-                            alt="mappa"
+                            alt="locandina"
                             layout='responsive'
                             priority
                         />
                         {/* <Book /> */}
                     </Col>
-                    <Col className='mt-5' sm={4}>
+                    <Col sm={4} className='d-none d-md-block' ref={col3Ref}>
                         <ExportedImage
                             src={lupofalodx}
                             layout='responsive'
@@ -72,9 +145,9 @@ export default function Menu({ data }) {
                 <Container>
                     <Row className='mt-5 mb-5 d-flex align-items-center justify-content-center'>
                         <Col sm={6} className='mt-5'>
-                            <h2 className='text-upper text-end'>Acqua gratis</h2>
+                            <h2 className='text-upper text-md-end'>Acqua gratis</h2>
                             <div className='d-flex'>
-                                <p className='text-end'>
+                                <p className='text-md-end'>
                                     L'acqua è il bene più prezioso, per questo vogliamo dissetarci senza inquinare e plastic free: da Lambrock Féstival puoi acquistare una borraccia con il logo del festival e riempirla quante volte vuoi ai nostri dispenser di acqua fresca, senza pagare. 100% gratis, 100% sostenibile.
                                 </p>
                             </div>

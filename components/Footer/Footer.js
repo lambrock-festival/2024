@@ -76,7 +76,7 @@ export default function Footer() {
                             Lambrock Festival è arrivato alla sua decima edizione, e siamo pronti a farvi vivere un'esperienza unica.
                         </p>
                     </div>
-                    <div className='col-6 col-md-3 col-lg-2 mb-4 mb-md-0 text-center'>
+                    <div className='col-12 col-md-4 col-lg-3 text-center'>
                         <h6 className='text-capitalize fw-bold mb-4'>
                             <i className='fas fa-link me-3'></i>
                             {/* <FontAwesomeIcon icon={faLink} className='me-3' /> */}
@@ -100,10 +100,10 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className='col-6 col-md-2 col-lg-2 mb-4 mb-md-0 text-center'>
+                   {/*  <div className='col-6 col-md-2 col-lg-2 mb-4 mb-md-0 text-center'>
                         <h6 className='text-capitalize fw-bold mb-4'>
                             <i className='fas fa-download me-3'></i>
-                            {/* <FontAwesomeIcon icon={faDownload} className='me-3' /> */}
+                            <FontAwesomeIcon icon={faDownload} className='me-3' />
                             scaricabili
                         </h6>
                         <ul className='list-unstyled'>
@@ -111,7 +111,7 @@ export default function Footer() {
                                 <a href='#' className='text-reset'>Lista Allergeni</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                     <div className='col-12 col-md-4 col-lg-3 text-center'>
                         <h6 className='text-capitalize fw-bold mb-4'>
                             <i className='fas fa-address-card me-3'></i>
