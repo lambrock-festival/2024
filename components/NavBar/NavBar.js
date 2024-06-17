@@ -8,7 +8,6 @@ import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
 import lupiWorkshop from '@/public/images/lupi-workshop.webp';
 import lupiSocial from '@/public/images/lupo-social.webp';
 import Logo from '@/public/images/Logo.png';
-// bootstrap
 import { Navbar, Container, Col, Row } from 'react-bootstrap';
 
 export default function NavBar() {
@@ -104,8 +103,8 @@ export default function NavBar() {
                     <ExportedImage
                         src={Logo}
                         alt="Logo"
-                        width={125.20}
-                        height={75.53}
+                        width={150.0}
+                        height={91.0}
                     />
                 </Navbar.Brand>
             </Col>
