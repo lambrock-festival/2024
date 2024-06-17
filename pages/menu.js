@@ -1,6 +1,6 @@
 // template
 import { getPageMD } from '@/utils/load-md';
-import { Template } from '@/components/Templates';
+import { PageTemplate } from '@/components/Templates';
 // style
 import * as s from '@/styles/Menu.module.scss';
 import 'animate.css/animate.min.css';
@@ -10,10 +10,10 @@ import { useEffect, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/cibo-copertina.webp'
-import locandinaMenu from '@/public/images/locandina-menu.webp'
-import lupofalosx from '@/public/images/lupi-falo-neri-sx.webp'
-import lupofalodx from '@/public/images/lupi-falo-neri-dx.webp'
+import LocandinaMenu from '@/public/images/LocandinaMenu.jpg'
+import lupofalosx from '@/public/images/lupi-falo-neri-sx.png'
+import lupofalodx from '@/public/images/lupi-falo-neri-dx.png'
+import qr from '@/public/images/qr.jpg'
 import borraccia from '@/public/images/borraccia.webp'
 
 export default function Menu({ data }) {
@@ -89,8 +89,8 @@ export default function Menu({ data }) {
 
     return (
         <>
-            <Template>
-                <div className='mb-5' style={{
+            <PageTemplate>
+                {/* <div className='mb-5' style={{
                     position: 'relative', height: '75vh', '@media (maxWidth: 768px)': {
                         height: '55vh',
                     },
@@ -103,7 +103,7 @@ export default function Menu({ data }) {
                         priority
                         style={{ zIndex: -1 }}
                     />
-                </div>
+                </div> */}
                 <h1 className='d-flex justify-content-center mb-0 mt-5 animate__animated animate__slideInDown'>MENU DA LUP*</h1>
                 <Container className='mt-5'>
                     <Row className='mt-5 text-center'>
@@ -125,8 +125,8 @@ export default function Menu({ data }) {
                     </Col>
                     <Col sm={4} className='mt-5' ref={col2Ref}>
                         <ExportedImage
-                            src={locandinaMenu}
-                            alt="locandina"
+                            src={LocandinaMenu}
+                            alt="menu"
                             layout='responsive'
                             priority
                         />
@@ -141,7 +141,6 @@ export default function Menu({ data }) {
                         />
                     </Col>
                 </Row>
-                <hr />
                 <Container>
                     <Row className='mt-5 mb-5 d-flex align-items-center justify-content-center'>
                         <Col sm={6} className='mt-5'>
@@ -161,7 +160,26 @@ export default function Menu({ data }) {
                         </Col>
                     </Row>
                 </Container>
-            </Template >
+                <Container>
+                    <Row className='mt-5 mb-5 d-flex align-items-center justify-content-center'>
+                        <Col sm={6} className='mb-5 mt-5'>
+                            <ExportedImage
+                                src={qr}
+                                alt="qr"
+                                layout="responsive"
+                            />
+                        </Col>
+                        <Col sm={6} className='mt-5'>
+                            <h2 className='text-upper text-md-end'>Ordina online</h2>
+                            <div className='d-flex'>
+                                <p className='text-md-end'>
+                                    Basta code, file e trenini per ordinare il tuo menu. Ordina il tuo pasto e la tua bevanda con l'app e consumali in qualsiasi momento.
+                                </p>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </PageTemplate >
         </>
     );
 }

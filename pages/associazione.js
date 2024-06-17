@@ -1,5 +1,5 @@
-// template
-import { Template } from '@/components/Templates';
+// PageTemplate
+import { PageTemplate } from '@/components/Templates';
 import { getPageMD } from '@/utils/load-md';
 // react
 import { useEffect, useRef } from 'react';
@@ -119,8 +119,8 @@ export default function Associazione({ data }) {
 
     return (
         <>
-            <Template>
-                <div className='mb-5' style={{
+            <PageTemplate>
+                {/* <div className='mb-5' style={{
                     position: 'relative', height: '75vh', '@media (maxWidth: 768px)': {
                         height: '55vh',
                     },
@@ -133,7 +133,7 @@ export default function Associazione({ data }) {
                         priority
                         style={{ zIndex: -1 }}
                     />
-                </div>
+                </div> */}
 
                 <Container className='mt-5'>
                     <Row className='mt-5'>
@@ -213,7 +213,7 @@ export default function Associazione({ data }) {
 
                 </Container>
 
-            </Template >
+            </PageTemplate>
         </>
     );
 }

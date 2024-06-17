@@ -1,0 +1,51 @@
+
+.LynoJean {
+    font-family: var(--lyno-jean-font);
+    font-size: 4em;
+}
+
+.LynoUlys {
+    font-family: var(--lyno-ulys-font);
+    font-size: 4em;
+}
+
+.LynoWalt {
+    font-family: var(--lyno-walt-font);
+    font-size: 4em;
+}
+
+.InkTrapRegular {
+    font-family: var(--inktrap-regular-font);
+    font-size: 4em;
+}
+
+.InkTrapBold {
+    font-family: var(--inktrap-bold-font);
+    font-size: 4em;
+}
+
+.InkTrapBook {
+    font-family: var(--inktrap-book-font);
+    font-size: 4em;
+}
+
+@media (max-width: 768px) {
+    .LynoJean {
+        font-size: 1.25em;
+    }
+    .LynoUlys {
+        font-size: 1.25em;
+    }
+    .LynoWalt {
+        font-size: 1.25em;
+    }
+    .InkTrapRegular {
+        font-size: 1.25em;
+    }
+    .InkTrapBold {
+        font-size: 1.25em;
+    }
+    .InkTrapBook {
+        font-size: 1.25em;
+    }
+}

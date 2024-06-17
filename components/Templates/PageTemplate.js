@@ -5,7 +5,10 @@ import { Footer } from '../Footer';
 export default function PageTemplate({ children }) {
     return (
         <>
-            <NavBar />
+            {/* navbar */}
+            <div className="p-3 pt-0">
+                <NavBar />
+            </div>
             {children}
             {/* <Slider /> */}
             <Footer />

@@ -1,5 +1,5 @@
-// template
-import { Template } from '@/components/Templates';
+// PageTemplate
+import { PageTemplate } from '@/components/Templates';
 import { getPageMD } from '@/utils/load-md';
 // react
 import React, { useState } from 'react';
@@ -25,8 +25,8 @@ export default function Info({ data }) {
     };
     return (
         <>
-            <Template>
-                <div className='mb-5' style={{
+            <PageTemplate>
+                {/* <div className='mb-5' style={{
                     position: 'relative',
                     height: '75vh',
                     '@media (maxWidth: 768px)': {
@@ -41,18 +41,16 @@ export default function Info({ data }) {
                         priority
                         style={{ zIndex: -1 }}
                     />
-                </div>
+                </div> */}
                 <Container className='mt-5 mb-5'>
                     <Row className='mt-5 mb-5'>
                         <h1 className='d-flex justify-content-center animate__animated animate__slideInDown'>Info Utili</h1>
-                        {/*
-                            <p className='text-center'>
-                                È una *info utile*. Lorem ipsup dolor sit amet.
-                            </p> 
-                        */}
+                        <p className='text-center'>
+                            Se hai domande o vuoi sapere di più, contattaci.
+                        </p> 
                     </Row>
+                    <hr />
                 </Container>
-                <hr />
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8154060721213!2d9.164317815975984!3d45.79492577910634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786a179564d7947%3A0x5326b0d39effa32e!2sLambrock%20Festival!5e0!3m2!1sit!2sit!4v1680695946453!5m2!1sit!2sit"
                     width="1000"
@@ -127,7 +125,7 @@ export default function Info({ data }) {
                     </Row>
                 </Container >
 
-                < Container id='mappalrf'>
+                {/* <Container id='mappalrf'>
                     <Row>
                         <Col sm={12} className='mb-5'>
                             <ExportedImage
@@ -137,9 +135,9 @@ export default function Info({ data }) {
                             />
                         </Col>
                     </Row>
-                </Container >
+                </Container > */}
 
-            </Template >
+            </PageTemplate >
         </>
     );
 }

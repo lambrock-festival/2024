@@ -1,0 +1,40 @@
+:root {
+    --magnifier: 6;
+    --gap: 1vmin;
+    --transition: 0.5s;
+}
+
+.containerGallerySlider {
+    position: relative;;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    
+}
+
+.sliderimg {
+    --brightness: 0.75;
+    --grayscale: 1;
+    transition: flex var(--transition), filter var(--transition);
+    height: 100%;
+    /* filter: grayscale(var(--grayscale)) brightness(var(--brightness)); */
+    filter: grayscale(0.5);
+    object-fit: cover;
+    overflow: hidden;
+    flex: 1;
+    box-shadow:
+            0 0 10px #0002,
+            0 20px 40px -20px #0004;
+        border-radius: 1rem;
+        border: 6px solid #fff;
+}
+
+.sliderimg:hover {
+    /* --brightness: 1.15;
+    --grayscale: 0; */
+    filter: grayscale(0);
+    flex: var(--magnifier);
+}

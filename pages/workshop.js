@@ -1,6 +1,6 @@
-// template
+// PageTemplate
 import { getPageMD } from '@/utils/load-md';
-import { Template } from '@/components/Templates';
+import { PageTemplate } from '@/components/Templates';
 // react
 import { useEffect, useRef } from 'react';
 // bootstrap
@@ -10,9 +10,8 @@ import * as style from '@/styles/Workshop.module.scss';
 import 'animate.css';
 // image 
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/workshopcopertina.webp'
-import workshopBox from '@/public/images/workshopbox.webp'
-import workshopBox2 from '@/public/images/workshopbox2.webp'
+import workshopBox2 from '@/public/images/xilo.jpg'
+import workshopBox from '@/public/images/lemat.jpg'
 import { OffCanvas } from '@/components/OffCanvas';
 import Partners from '@/components/Partner/Partner';
 
@@ -98,66 +97,50 @@ export default function Workshop({ data }) {
             copy: 'Sfogate sul legno le vostre peggiori fantasie! La xilografia è una tecnica d’incisione a rilievo su legno, per riprodurre a stampa, su materiali diversi, disegni, motivi decorativi e caratteri incisi. Con Cesare Tarma e Simone Elli incisore e pittore.'
         },
         {
-            name: 'TALK: STATUARIA COLONIALISTA',
-            copy: 'Un breve ma intenso viaggio attraverso alcune delle rappresentazioni statuarie coloniali più controverse e razziste del Belgio, ancora in bella vista nella multiculturalissima Bruxells. Relatore e moderatore Matteo Redaelli.',
+            name: 'OPIFICIO IMAGINARIUM',
+            copy: 'Laboratorio di fiori origami. Dedicato a ragazzə e adulti, a partire dai 14 anni. Impara a piegare alcuni tra i fiori classici della tradizione origami, per poi comporre un piccolo bouquet. Costo 15 euro materiali compresi',
         },
         {
-            name: 'PET THERAPY',
-            copy: 'I bambini entreranno in contatto diretto con cani addestrati (vaccinati e assicurati) in ambito educativo: impareranno ad accarezzare, spazzolare, dare da mangiare e interagire correttamente con i pet. Laboratorio rivolto ai bambini dagli 0 ai 10 anni in modo differenziato; con Claudia Bordoli di Dog4Life.'
+            name: 'TALK: PERSONE RECLUSE',
+            copy: 'I volontari del NAGA forniscono assistenza sanitaria, legale e sociale gratuita a stranieri irregolari. Nel carcere, sono tra i più vulnerabili. "Al di là di quella porta" rivela abusi e discriminazioni nei CPR, dove persone trattenute per illeciti amministrativi affrontano misure disumane e sproporzionate.',
+        },        
+        {
+            name: 'SCRATCH ART',
+            copy: "Unisciti a noi per un'esperienza artistica indimenticabile! Bambini di tutte le età si divertiranno a creare e disegnare su una magica superficie di pastelli a cera e inchiostro nero. Grattando via il nero, scopriranno i colori nascosti sotto. Divertimento assicurato per soli 2€!"
         },
         {
-            name: 'OGNI BAMBIN* È UN ARTISTA',
-            copy: 'Imparare divertendosi: laboratori pensati e strutturati per fare in modo che i bambini potenzino le loro capacità attraverso l’uso di diversi materiali(carta, gomma eva, pannolenci, plastilina) e sviluppino la motricità fine.Età minima: dai 4 anni, dai 3 alla presenza di un genitore.'
+            name: 'LABORATORIO DI TAROCCHI',
+            copy: 'Il laboratorio sui Tarocchi di Marsiglia è un’esperienza unica. Non è una semplice conferenza o una presentazione didascalica. L’obiettivo è coinvolgere i partecipanti in un’immersione profonda nell’energia e nelle vibrazioni dei Tarocchi. Scoprirai le caratteristiche principali di questo strumento attraverso un’esperienza intensa, leggera e appassionante. Un’occasione imperdibile per conoscere il Tarot in modo autentico e coinvolgente.'
         },
         {
-            name: 'DOVE VIVONO I LUPI?',
-            copy: 'Dove vivono i lupi? Un laboratorio che offre ai bambin* uno spazio di sperimentazione di linguaggi espressivi, come quello narrativo e quello grafico-artistico. Creazione di tinte naturali, tante attività e tutti alla ricerca del lupo! Per tutte le bambine e i bambini, con le educatrici di KEATS Aps.'
+            name: 'INCISIONE POPOLARE',
+            copy: "'Cresciuta tra sarte e falegnami, ho imparato le antiche e preziose tecniche dell’incisione orafa e ora desidero condividerle con voi come forma di espressione creativa. imparerete a incidere su una lastrina in ottone con il bulino, e personalizzerete un ciondolo in argento che potrete conservare. Materiali forniti dall'insegnante. Portate occhiali e lenti di ingrandimento. Se vuoi incidere un gioiello personale (in bronzo, ottone, rame, argento o oro) portalo con te! Costo: 15€ a testa + 8€ per il ciondolo in argento."
         },
         {
-            name: 'DEGUSTAZIONE DI VINI',
-            copy: 'Alla scoperta dei vini di Giachino Claudio, di Montelupo Albese (CN), e dei vini del cuneese: langhe bianco, chardonnay, dolcetto e  nebbiolo d’alba.Degustazione di vini curata da "Il circolo Arci Terra e Libertà Enoteca Popolare" di Cantù.'
+            name: "C'ERA UNA STAMPA",
+            copy: 'Raccontare una storia, rappresentarla in forma di immagine, tagliare e stampare su una tua maglia a tinta unita la tua immaginazione. Costo: 5€'
         },
         {
-            name: 'LABORATORIO DI GIOCOLERIA',
-            copy: 'Un incontro con il mondo del circo attraverso la conoscenza e la sperimentazione degli attrezzi di giocoleria più famosi: palline, cerchi, clave, foulard e piatti cinesi. Un occasione per sfidare le proprie capacità e di divertirsi insieme, con "CIRCOLIAMO".'
+            name: "A RITMO DI LUNA",
+            copy: "In ventre di Luna, sussurr' di conchiglia. Sbatte e percote il motore perpetuo. Dialettica danza d'argento vite. Ulula il Deserto. Cerchio di scoperta e condivisione sul ciclo mestruale.  Il laboratorio tenuto dai relatori Anna Mottinelli e Claudia Araldi, ostetriche libere professioniste della Casa Maternità La Quercia. "
         },
         {
-            name: 'APERISEGNO',
-            copy: 'Un aperitivo sociale, divertente e aperto a tutti. L’unica regola? È obbligatorio comunicare attraverso la lingua dei segni LIS.Curato da un team di docenti LIS, che forniranno cartoncini e strumenti utili ad imparare l’ABC della gestualità più espressiva che ci sia.'
-        },
-        {
-            name: 'ACCHIAPPASOGNI',
-            copy: 'Il laboratorio si aprirà con un’introduzione sull’origine dell’acchiappasogni e sulle essenze botaniche da intreccio, per poi passare all’azione: realizzerai un intreccio circolare utilizzando rami duttili e una tela di fili che, in seguito, decorerai con elementi naturali.'
+            name: "ARTE INCLUSIVA",
+            copy: "Partecipa al nostro laboratorio creativo, un'occasione di incontro e inclusione. Realizzeremo pali/testimoni rivestiti a mosaico, simboli dell'arte inclusiva. Aperto a tutti, indipendentemente da età, provenienza, orientamento o abilità.Miglioriamo la qualità di vita delle persone adulte con autismo, abilitando e creando contesti socio-assistenziali e psicoeducativi."
         },
         {
             name: 'CIANOTIPIE FLOREALI',
             copy: 'Grazie alla cianotipia, antico metodo di stampa fotografica, nato proprio per creare i libri botanici, scopriamo cosa e quali sono le specie nettarifere: un laboratorio organizzato da "AL LÖCH" divertente, formativo, pern scoprire i segreti nascosti dei nostri prati.'
         },
         {
-            name: 'BOMBE DI SEMI',
-            copy: 'Con gli esperti botanici del "AL LÖCH" scopriamo insieme cosa sono i fiori nettariferi, e usiamo i loro semi per creare bombe di semi per i nostri balconi e giardini, per aiutare gli insetti a trovare più facilmente fonti di nutrimento anche in città.'
+            name: 'ERBARI FANTASTICI',
+            copy: 'Con gli esperti botanici del "AL LÖCH" scopriamo insieme elementi naturali, e li usiamo per creare magici personaggi che abitino il nostro mondo immaginario.'
         },
     ]
 
     return (
         <>
-            <Template>
-                <div className='mb-5 ' style={{
-                    position: 'relative',
-                    height: '75vh',
-                    '@media (maxWidth: 768px)': {
-                        height: '55vh',
-                    },
-                }}>
-                    <ExportedImage
-                        src={copertina}
-                        alt="workshop"
-                        layout='fill'
-                        objectFit='cover'
-                        priority
-                        style={{ zIndex: -1 }}
-                    />
-                </div>
+            <PageTemplate>
                 <Container className='mt-5 mb-5'>
                     <Row className='mt-5'>
                         <h1 className='d-flex justify-content-center animate__animated animate__slideInDown'>Workshop</h1>
@@ -168,47 +151,71 @@ export default function Workshop({ data }) {
                 </Container>
 
                 <Container className='mt-5 mb-5'>
+
+                    {/* Sabato */}
                     <Row className='d-flex align-items-center justify-content-center'>
-                        <Col sm={6} ref={workshopBoxRef} className=''>
+                        <Col sm={5} ref={workshopBoxRef} className=''>
                             <ExportedImage
                                 src={workshopBox2}
                                 alt="lupo-workshop"
                                 layout="responsive"
                             />
                         </Col>
-                        <Col sm={6} ref={textRef1} className='mt-5'>
+                        <Col sm={4} ref={textRef1} className='mt-5'>
                             <h2 className=''>Sabato</h2>
                             <ul>
-                                <li> Degustazione con enoteca popolare</li>
-                                {/* <li> Laboratorio per bambini con Keats</li> */}
-                                <li> Laboratorio di circo</li>
+                                <li> Maiuscole e minuscole</li>
+                                <li> C'era una stampa</li>
+                                <li> Incisione su gioielli</li>
+                                <li> Scratch art</li>
                                 <li> Laboratorio di cianotipie floreali</li>
-                                <li> Pet therapy</li>
                                 <li> Xilografia</li>
                             </ul>
-                            <OffCanvas className={style.btn} />
+                            <OffCanvas 
+                                cname={style.btn} 
+                                url='https://forms.gle/QXsQimszEt3zxGe38' 
+                                src='/2024/images/qr.png'
+                            />
                         </Col>
                     </Row>
+
+                    <Container>
+                        <Row className='text-center mt-5 mb-5'>
+                            <h2 className='mt-5'>AUTOPRODUZIONI</h2>
+                            <Col sm={12}>
+                                <p>
+                                    Vieni a scoprire i banchetti! Un'opportunità per sostenere il lavoro artigianale e trovare pezzi unici fatti a mano. Sostieni la produzione indipendente !
+                                </p>
+                            </Col>
+
+                        </Row>
+                    </Container>
+
+                    {/* Domenica */}
                     <Row className='mt-5 d-flex align-items-center justify-content-center'>
-                        <Col sm={6} ref={textRef2} className='mt-5 '>
+                        <Col sm={5} ref={textRef2} className='mt-5 '>
                             <h2 className='text-end'>Domenica</h2>
                             <ul className={`${style.directionRtl}`}>
-                                <li className={`${style.liEmbended}`}>Laboratorio di acchiappasogni</li>
-                                {/* <li className={`${style.liEmbended}`}>Opificio imaginarium</li> */}
-                                {/* <li className={`${style.liEmbended}`}>Laboratorio di acchiappasogni</li> */}
-                                <li className={`${style.liEmbended}`}>Laboratorio di cianotipie floreali</li>
-                                <li className={`${style.liEmbended}`}>Laboratorio di ”bombe di semi”</li>
+                                <li className={`${style.liEmbended}`}>Laboratorio di tarocchi di Marsiglia</li>
+                                <li className={`${style.liEmbended}`}>Opificio imaginarium</li>
+                                <li className={`${style.liEmbended}`}>Arte inclusiva</li>
+                                <li className={`${style.liEmbended}`}>A ritmo di luna</li>
+                                <OffCanvas 
+                                    cname={style.btn} 
+                                    url='https://forms.gle/QXsQimszEt3zxGe38' 
+                                    src='/2024/images/qr.png'
+                                />
                             </ul>
-                            <OffCanvas className={style.btnSpecular} />
                         </Col>
-                        <Col sm={6} ref={workshopBox2Ref} className=''>
+                        <Col sm={4} ref={workshopBox2Ref} className=''>
                             <ExportedImage
                                 src={workshopBox}
-                                alt="lupo-workshop"
+                                alt="le mat"
                                 layout="responsive"
                             />
                         </Col>
                     </Row>
+
                     {/* Carosello WS */}
                     <Row className='m-2 mt-5'>
                         <Partners className='mt-5' partners={partners} />
@@ -216,7 +223,7 @@ export default function Workshop({ data }) {
 
                 </Container>
 
-            </Template >
+            </PageTemplate >
         </>
     );
 }

@@ -1,12 +1,12 @@
 import ExportedImage from 'next-image-export-optimizer';
-import { Row } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import style from './Partner.module.scss';
 
 export default function Partners({ partners }) {
     // if is mobile not auto play check before window existance
-    const autoplay = (typeof window !== 'undefined' && window.innerWidth > 768) ? true : false;
+    const autoplay = (typeof window !== 'undefined' && window.innerWidth > 768) ? false : false;
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -73,13 +73,12 @@ export default function Partners({ partners }) {
                                         style={{ marginBottom: '2rem', marginRight: '2rem', padding: '0 1rem' }}
                                     />
                                     :
-
-                                    <div className={style.outerContainer}>
-                                        <div className={style.innerContainer}>
+                                    <Row className={style.outerContainer}>
+                                        <Col className={style.innerContainer}>
                                             <h2 className="">{partner.name}</h2>
                                             <p className="">{partner.copy}</p>
-                                        </div>
-                                    </div>
+                                        </Col>
+                                    </Row>
                             }
                         </div>
                     </Row>
