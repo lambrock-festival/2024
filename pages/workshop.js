@@ -164,8 +164,7 @@ export default function Workshop({ data }) {
                         <Col sm={4} ref={textRef1} className='mt-5'>
                             <h2 className=''>Sabato</h2>
                             <ul>
-                                <li> Maiuscole e minuscole</li>
-                                <li> C'era una stampa</li>
+                                <li> Laboratorio di stampa per bambini</li>
                                 <li> Incisione su gioielli</li>
                                 <li> Scratch art</li>
                                 <li> Laboratorio di cianotipie floreali</li>
@@ -197,9 +196,9 @@ export default function Workshop({ data }) {
                             <h2 className='text-end'>Domenica</h2>
                             <ul className={`${style.directionRtl}`}>
                                 <li className={`${style.liEmbended}`}>Laboratorio di tarocchi di Marsiglia</li>
-                                <li className={`${style.liEmbended}`}>Opificio imaginarium</li>
-                                <li className={`${style.liEmbended}`}>Arte inclusiva</li>
-                                <li className={`${style.liEmbended}`}>A ritmo di luna</li>
+                                <li className={`${style.liEmbended}`}>Fiori Origami</li>
+                                <li className={`${style.liEmbended}`}>Arte inclusiva - Cascina Cristina</li>
+                                <li className={`${style.liEmbended}`}>Laboratorio sulle mestruazioni</li>
                                 <OffCanvas 
                                     cname={style.btn} 
                                     url='https://forms.gle/QXsQimszEt3zxGe38' 
