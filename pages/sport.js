@@ -38,6 +38,14 @@ const stilo2 = {
     height: '20vw',
 }
 
+const stiloSmall = {
+    position: 'relative',
+    top: 120,
+    left: 0,
+    width: '100vw',
+    height: '100vw',
+}
+
 const stilo3 = {
     position: 'relative',
     top: 140,
@@ -179,30 +187,48 @@ export default function Sport() {
 
                     <Row className=''>
                         <Col className='mb-2 d-flex justify-content-center align-items-center'>
-                           
+
                             {/* medaglia 2 3D */}
                             <StlViewer
+                                className='d-none d-md-block'
                                 shadows
                                 url={medaglia23D}
                                 modelProps={{ color: 'rgb(229,228,226)', scale: 150,  rotationX: 20, rotationY: 100, rotationZ: 50  }}
                                 cameraRef
                                 style={stilo2}
                                 floorProps={{ gridWidth: 10, gridLength : 10 }}
+                                
                             />
 
                             {/* medaglia 1 3D */}
                             <StlViewer
+                                className='d-none d-md-block'
                                 shadows
                                 url={medaglia13D}
-                                modelProps={{ color: 'rgb(181,166,66)', scale: 150,  rotationX: -150, rotationY: 50, rotationZ: 50 }}
+                                modelProps={{ color: 'rgb(181,166,66)', scale: 150,  rotationX: -150, rotationY: 50, rotationZ: 50, positionX: -5.5 }}
                                 cameraRef
                                 style={stilo1}
                                 floorProps={{ gridWidth: 10, gridLength : 10 }}
                                 orbitControls
                             />
+
+                            {/* when small */}
+                            <div className='d-md-none'>
+                                {/* medaglia 1 3D */}
+                                <StlViewer
+                                    shadows
+                                    url={medaglia13D}
+                                    modelProps={{ color: 'rgb(181,166,66)', scale: 150,  rotationX: -150, rotationY: 50, rotationZ: 50, positionX: -5.5 }}
+                                    cameraRef
+                                    style={stiloSmall}
+                                    floorProps={{ gridWidth: 10, gridLength : 10 }}
+                                    orbitControls
+                                />
+                            </div>
                             
                             {/* medaglia 3 3D */}
                             <StlViewer
+                                className='d-none d-md-block'
                                 shadows
                                 url={medaglia33D}
                                 modelProps={{ color: 'rgb(169,91,14)', scale: 150, rotationX: 20, rotationY: 160, rotationZ: 50 }}
