@@ -1,10 +1,4 @@
-/*
-    TODO: 
-        togliere lupi qui e anche ws
-        rinpicciolire home
-        aggiungere animazioni mancanti
-        convertire ultime foto in webp
-*/
+import { React, useEffect, useRef, useState } from 'react';
 // PageTemplate
 import { getPageMD } from '@/utils/load-md';
 import { PageTemplate } from '@/components/Templates';
@@ -54,38 +48,89 @@ export default function Band({ data }) {
         { name: 'xmary', logo: xmary, width: 500, height: 500 },
         { name: 'livepainting', logo: livepainting, width: 500, height: 500 },
     ];
+
+    const onElementVisibleLeft = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInLeft');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const onElementVisibleRight = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInRight');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const onElementVisibleUp = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInUp');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const col1Ref = useRef(null);
+    const col2Ref = useRef(null);
+    const col3Ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === col1Ref.current) {
+                            onElementVisibleLeft(entry);
+                        } else if (entry.target === col2Ref.current) {
+                            onElementVisibleUp(entry);
+                        } else if (entry.target === col3Ref.current) {
+                            onElementVisibleRight(entry);
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+            }
+        );
+
+        if (col1Ref.current) {
+            observer.observe(col1Ref.current);
+            col1Ref.current.style.visibility = 'hidden';
+        }
+
+        if (col2Ref.current) {
+            observer.observe(col2Ref.current);
+            col2Ref.current.style.visibility = 'hidden';
+        }
+
+        if (col3Ref.current) {
+            observer.observe(col3Ref.current);
+            col3Ref.current.style.visibility = 'hidden';
+        }
+
+        return () => {
+            if (col1Ref.current) {
+                observer.unobserve(col1Ref.current);
+            }
+
+            if (col2Ref.current) {
+                observer.unobserve(col2Ref.current);
+            }
+
+            if (col3Ref.current) {
+                observer.unobserve(col3Ref.current);
+            }
+        };
+    }, []);
+
     return (
         <>
             <PageTemplate>
-                {/* <div className='mb-5' style={{
-                    position: 'relative',
-                    height: '75vh',
-                    '@media (maxWidth: 768px)': {
-                        height: '55vh',
-                    },
-                }}>
-                    <ExportedImage
-                        src={copertina}
-                        alt="band"
-                        layout='fill'
-                        objectFit='cover'
-                        priority
-                        style={{ zindex: -1 }}
-                    />
-                </div> */}
-                <Container className='mt-5  '>
-                    <Row className='mt-5 text-align-center'>
-                        <h1 className='text-center animate__animated animate__slideInDown'>
-                            LINE UP
-                        </h1>
-                        <p className='text-center'>
-                            Live music, artist* internazional*, local bands e dj set: 3 giorni di musica no stop!
-                        </p>
+                <h1 className='d-flex justify-content-center mb-0 mt-5 animate__animated animate__slideInDown'>LINE UP</h1>
+                <Container className='mt-5'>
+                    <Row className='mt-5 text-center'>
+                        <p className='text-center'>Live music, artist* internazional*, local bands e dj set: 3 giorni di musica no stop!</p>
                         <hr />
                     </Row>
                 </Container>
-                <Row className='m-2 mt-5 text-align-center'>
-                    <Col sm={4}>
+                <Row className='m-2 mt-5 mb-5 text-align-center'>
+                    <Col sm={4} className='d-none d-md-block' ref={col1Ref}>
                         <ExportedImage
                             src={lupofalosx}
                             layout='responsive'
@@ -93,23 +138,24 @@ export default function Band({ data }) {
                             className={s.lupifalocol}
                         />
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='mt-5' ref={col2Ref}>
                         <ExportedImage
                             src={LocandinaBand}
                             alt="band"
                             layout='responsive'
+                            priority
                         />
+                        {/* <Book /> */}
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='d-none d-md-block' ref={col3Ref}>
                         <ExportedImage
                             src={lupofalodx}
                             layout='responsive'
-                            alt='LupoFaloDX'
+                            alt='LupoFaloSX'
                             className={s.lupifalocol}
                         />
                     </Col>
                 </Row>
-
 
                 <Container>
                     <Row className='text-center mb-5'>

@@ -9,7 +9,7 @@ import * as s from '@/styles/Info.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import copertina from '@/public/images/contatti-copertina.webp'
+import Parking from '@/public/images/parking.jpg'
 import lupobar from '@/public/images/lupi-volontari.webp'
 import mappa from '@/public/images/mappa.webp'
 
@@ -51,21 +51,12 @@ export default function Info({ data }) {
                     </Row>
                     <hr />
                 </Container>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8154060721213!2d9.164317815975984!3d45.79492577910634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786a179564d7947%3A0x5326b0d39effa32e!2sLambrock%20Festival!5e0!3m2!1sit!2sit!4v1680695946453!5m2!1sit!2sit"
-                    width="1000"
-                    height="600"
-                    className={s.img}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
                 <Container className='mt-5'>
-                    <Row className='mt-5 mb-5'>
+                <Row className='mt-5 mb-5'>
                         <Col sm={8} className='mb-5'>
                             <ExportedImage
                                 src={lupobar}
-                                alt="mappa"
+                                alt="lupo-bar"
                                 layout='responsive'
                                 style={{ transform: 'scaleX(-1)' }}
                                 placeholder='blur'
@@ -120,6 +111,35 @@ export default function Info({ data }) {
                                     Invia
                                 </button>
                             </form>
+
+                        </Col>
+                    </Row>
+                    
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8154060721213!2d9.164317815975984!3d45.79492577910634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786a179564d7947%3A0x5326b0d39effa32e!2sLambrock%20Festival!5e0!3m2!1sit!2sit!4v1680695946453!5m2!1sit!2sit"
+                        width="1000"
+                        height="600"
+                        className={s.img + ' mb-5'}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <Row className='mt-5 mb-5'>
+                        <Col sm={8} className='mb-5'>
+                            <ExportedImage
+                                src={Parking}
+                                alt="parking"
+                                layout='responsive'
+                                placeholder='blur'
+                            />
+                        </Col>
+                        <Col sm={4} className='mt-5'>
+                            <h4 className='mt-5'>Cerchi parcheggio?</h4>
+                            <br />
+                            <p>
+                                Abbiamo pensato a tutto per rendere la tua esperienza al festival il più comoda possibile! Ampie aree di parcheggio sono disponibili nelle vicinanze dell'evento. Segui le indicazioni per guidarti al posto più vicino. Arriva in anticipo per assicurarti il posto migliore e goditi il festival senza preoccupazioni!
+                            </p>
 
                         </Col>
                     </Row>

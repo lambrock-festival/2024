@@ -55,77 +55,72 @@ const stilo3 = {
 }
 
 export default function Sport() {
-    const workshopBoxRef = useRef(null);
-    const workshopBox2Ref = useRef(null);
-    const textRef1 = useRef(null);
-    const textRef2 = useRef(null);
-
     const onElementVisibleLeft = (entry) => {
-        if (window.innerWidth > 768) {
-            entry.target.classList.add('animate__animated', 'animate__slideInLeft');
-        }
+        entry.target.classList.add('animate__animated', 'animate__slideInLeft');
         entry.target.style.visibility = 'visible';
     };
-
+    
     const onElementVisibleRight = (entry) => {
-        if (window.innerWidth > 768) {
-            entry.target.classList.add('animate__animated', 'animate__slideInRight');
-        }
+        entry.target.classList.add('animate__animated', 'animate__slideInRight');
         entry.target.style.visibility = 'visible';
     };
+    
+    const onElementVisibleUp = (entry) => {
+        entry.target.classList.add('animate__animated', 'animate__slideInUp');
+        entry.target.style.visibility = 'visible';
+    };
+    
+    const col1Ref = useRef(null);
+    const col2Ref = useRef(null);
+    const col3Ref = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        if (entry.target === workshopBox2Ref.current || entry.target === textRef2.current) {
-                            onElementVisibleRight(entry);
-                        } else {
+                        if (entry.target === col1Ref.current) {
                             onElementVisibleLeft(entry);
+                        } else if (entry.target === col2Ref.current) {
+                            onElementVisibleUp(entry);
+                        } else if (entry.target === col3Ref.current) {
+                            onElementVisibleRight(entry);
                         }
                         observer.unobserve(entry.target);
                     }
                 });
-            }, {
-            threshold: 0.5,
-        });
+            },
+            {
+                threshold: 0.5,
+            }
+        );
 
-        if (workshopBoxRef.current) {
-            observer.observe(workshopBoxRef.current);
-            workshopBoxRef.current.style.visibility = 'hidden';
+        if (col1Ref.current) {
+            observer.observe(col1Ref.current);
+            col1Ref.current.style.visibility = 'hidden';
         }
 
-        if (textRef1.current) {
-            observer.observe(textRef1.current);
-            textRef1.current.style.visibility = 'hidden';
+        if (col2Ref.current) {
+            observer.observe(col2Ref.current);
+            col2Ref.current.style.visibility = 'hidden';
         }
 
-        if (workshopBox2Ref.current) {
-            observer.observe(workshopBox2Ref.current);
-            workshopBox2Ref.current.style.visibility = 'hidden';
-        }
-
-        if (textRef2.current) {
-            observer.observe(textRef2.current);
-            textRef2.current.style.visibility = 'hidden';
+        if (col3Ref.current) {
+            observer.observe(col3Ref.current);
+            col3Ref.current.style.visibility = 'hidden';
         }
 
         return () => {
-            if (workshopBoxRef.current) {
-                observer.unobserve(workshopBoxRef.current);
+            if (col1Ref.current) {
+                observer.unobserve(col1Ref.current);
             }
 
-            if (textRef1.current) {
-                observer.unobserve(textRef1.current);
+            if (col2Ref.current) {
+                observer.unobserve(col2Ref.current);
             }
 
-            if (workshopBox2Ref.current) {
-                observer.unobserve(workshopBox2Ref.current);
-            }
-
-            if (textRef2.current) {
-                observer.unobserve(textRef2.current);
+            if (col3Ref.current) {
+                observer.unobserve(col3Ref.current);
             }
         };
     }, []);
@@ -133,18 +128,15 @@ export default function Sport() {
     return (
         <>
             <PageTemplate>
-                <Container className='mt-5 mb-5'>
-                    <Row className='mt-5'>
-                        <h1 className='d-flex justify-content-center animate__animated animate__slideInDown'>Sport</h1>
-                        <p className='text-center'>
-                            Grrrr!
-                        </p>
+                <h1 className='d-flex justify-content-center mb-0 mt-5 animate__animated animate__slideInDown'>SPORT</h1>
+                <Container className='mt-5'>
+                    <Row className='mt-5 text-center'>
+                        <p className='text-center'>Grrr</p>
                         <hr />
                     </Row>
                 </Container>
-
-                <Row className='m-2 mt-5 mb-5'>
-                    <Col sm={4}>
+                <Row className='m-2 mt-5 mb-5 text-align-center'>
+                    <Col sm={4} className='d-none d-md-block' ref={col1Ref}>
                         <ExportedImage
                             src={lupofalosx}
                             layout='responsive'
@@ -152,18 +144,20 @@ export default function Sport() {
                             className={s.lupifalocol}
                         />
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='mt-5' ref={col2Ref}>
                         <ExportedImage
                             src={LocandinaBasket}
                             alt="basket"
                             layout='responsive'
+                            priority
                         />
+                        {/* <Book /> */}
                     </Col>
-                    <Col sm={4} className='mt-5'>
+                    <Col sm={4} className='d-none d-md-block' ref={col3Ref}>
                         <ExportedImage
                             src={lupofalodx}
                             layout='responsive'
-                            alt='LupoFaloDX'
+                            alt='LupoFaloSX'
                             className={s.lupifalocol}
                         />
                     </Col>
