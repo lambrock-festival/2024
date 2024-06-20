@@ -9,9 +9,9 @@ import * as s from '@/styles/Info.module.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import Parking from '@/public/images/parking.jpg'
+import Parking from '@/public/images/parking.png'
 import lupobar from '@/public/images/lupi-volontari.webp'
-import mappa from '@/public/images/mappa.webp'
+import mappa from '@/public/images/mappa.png'
 
 export default function Info({ data }) {
     const [name, setName] = useState('');
@@ -52,7 +52,7 @@ export default function Info({ data }) {
                     <hr />
                 </Container>
                 <Container className='mt-5'>
-                <Row className='mt-5 mb-5'>
+                    <Row className='mt-5 mb-5'>
                         <Col sm={8} className='mb-5'>
                             <ExportedImage
                                 src={lupobar}
@@ -63,16 +63,16 @@ export default function Info({ data }) {
                             />
                         </Col>
                         <Col sm={4} className='mt-5'>
-                            <h4>Contatti</h4>
+                            <h2>Contatti</h2>
                             <p>
-                                <strong>Email:</strong> lambrockfest@gmail.com
+                                <h4>Email:</h4> lambrockfest@gmail.com
                                 <a href='mailto:lambrockfest@gmail.com' />
                             </p>
                             <p>
-                                <strong>Indirizzo:</strong> Via Cristoforo Colombo, 4, 22032 Albese con Cassano CO
+                                <h4>Indirizzo:</h4> Via Cristoforo Colombo, 4, 22032 Albese con Cassano CO
                             </p>
                             <br />
-                            <h4>Unisciti a noi</h4>
+                            <h2>Unisciti a noi</h2>
                             <form onSubmit={handleSubmit} className='mb-5'>
                                 <div className={s['form-group']}>
                                     <label htmlFor='name'>Nome</label>
@@ -125,27 +125,39 @@ export default function Info({ data }) {
                         referrerPolicy="no-referrer-when-downgrade">
                     </iframe>
 
-                    <Row className='mt-5 mb-5'>
-                        <Col sm={8} className='mb-5'>
+                </Container >
+
+                <Container>
+                    <Row>
+                        <Col sm={12} className='mt-5 text-center'>
+                            <h2 className='mt-5'>Cerchi parcheggio?</h2>
+                            <br />
+                            <p>
+                                Abbiamo pensato a tutto per rendere la tua esperienza al festival il più comoda possibile! Ampie aree di parcheggio sono disponibili nelle vicinanze dell'evento. Segui le indicazioni per guidarti al posto più vicino. Arriva in anticipo per assicurarti il posto migliore e goditi il festival senza preoccupazioni!
+                            </p>
+                        </Col>
+                    </Row>
+
+                    <Row className='mt-5 mb-5 g-5'>
+                        <Col sm={12} className='bg-light p-5 mb-5'>
                             <ExportedImage
                                 src={Parking}
                                 alt="parking"
                                 layout='responsive'
                                 placeholder='blur'
-                            />
-                        </Col>
-                        <Col sm={4} className='mt-5'>
-                            <h4 className='mt-5'>Cerchi parcheggio?</h4>
-                            <br />
-                            <p>
-                                Abbiamo pensato a tutto per rendere la tua esperienza al festival il più comoda possibile! Ampie aree di parcheggio sono disponibili nelle vicinanze dell'evento. Segui le indicazioni per guidarti al posto più vicino. Arriva in anticipo per assicurarti il posto migliore e goditi il festival senza preoccupazioni!
-                            </p>
-
+                                />
                         </Col>
                     </Row>
-                </Container >
+                </Container>
+                    
+                <Container id='mappalrf'>
 
-                {/* <Container id='mappalrf'>
+                    <Row>
+                        <Col sm={12} className='mt-5 text-center'>
+                            <h2 className='mt-5'>Mappa</h2>
+                            <br />
+                        </Col>
+                    </Row>
                     <Row>
                         <Col sm={12} className='mb-5'>
                             <ExportedImage
@@ -155,7 +167,8 @@ export default function Info({ data }) {
                             />
                         </Col>
                     </Row>
-                </Container > */}
+
+                </Container >
 
             </PageTemplate >
         </>
