@@ -27,7 +27,6 @@ export default function NavBar() {
         { text: 'workshop', image: lupiWorkshop, href: 'workshop' },
         /* { text: 'banchetti', image: lupiBanchetti, href: 'banchetti' }, */
         { text: 'food & drink', image: lupiWorkshop,/*  subMenuItems: ['Sfoglia', 'Allergeni'], */ href: 'menu', /* subHref: ['menu/sfoglia', 'menu/allergeni'] */ },
-        { text: 'sport', image: lupiWorkshop,/*  subMenuItems: ['Sfoglia', 'Allergeni'], */ href: 'sport', /* subHref: ['menu/sfoglia', 'menu/allergeni'] */ },
         { text: 'contatti', image: lupiSocial,/*  subMenuItems: ['come-arrivare', 'contatti'], */ href: 'info'/* , subHref: ['come-arrivare', 'contatti'] */ },
         { text: 'associazione', image: lupiWorkshop, href: 'associazione' },
 
