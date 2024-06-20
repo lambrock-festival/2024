@@ -334,9 +334,6 @@ export default function Home({ data }) {
                               <ExportedImage src={Basket} alt="basket" width={128} height={128} />
                             </div>
                             <p>Preparati a una doppia dose di adrenalina con Lambrasket e con gli Azzurri! Assisti alle performance delle giovani promesse del basket in Brianza e, subito dopo, vivi tutte le emozioni della partita, Italia-Spagna, sul grande schermo. Non perderti questo appuntamento!</p>
-                            <Link href='/sport' className={style.btn}>
-                              Scopri
-                            </Link>
                         </Col>
                         <Col xs={{ order: 1 }} sm={{ order: 2, span: 6 }} ref={workshopRefRight} className='mb-5'>
                           <ExportedImage src={UEFA} alt="uefa" width={1602} height={1605} />
