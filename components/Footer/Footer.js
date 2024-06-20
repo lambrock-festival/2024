@@ -111,7 +111,7 @@ export default function Footer({ children }) {
                                     <Link href='/info' className='text-reset'>Info</Link>
                                 </li>
                                 <li className='mb-2'>
-                                    <Link href='/sport' className='text-reset'>Basket</Link>
+                                    <Link href='/info#mappalrf' className='text-reset'>Mappa</Link>
                                 </li>
                             </ul>
                         </div>
