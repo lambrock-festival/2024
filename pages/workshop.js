@@ -166,6 +166,7 @@ export default function Workshop({ data }) {
                             <ul>
                                 <li> Laboratorio di stampa per bambini</li>
                                 <li> Incisione su gioielli</li>
+                                <li> Arte inclusiva - Cascina Cristina</li>
                                 <li> Scratch art</li>
                                 <li> Laboratorio di cianotipie floreali</li>
                                 <li> Xilografia</li>
@@ -197,7 +198,6 @@ export default function Workshop({ data }) {
                             <ul className={`${style.directionRtl}`}>
                                 <li className={`${style.liEmbended}`}>Laboratorio di tarocchi di Marsiglia</li>
                                 <li className={`${style.liEmbended}`}>Fiori Origami</li>
-                                <li className={`${style.liEmbended}`}>Arte inclusiva - Cascina Cristina</li>
                                 <li className={`${style.liEmbended}`}>Laboratorio sulle mestruazioni</li>
                                 <OffCanvas 
                                     cname={style.btn} 
