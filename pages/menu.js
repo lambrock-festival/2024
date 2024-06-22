@@ -10,7 +10,7 @@ import { useEffect, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 // image
 import ExportedImage from 'next-image-export-optimizer/legacy/ExportedImage';
-import LocandinaMenu from '@/public/images/LocandinaMenu.jpg'
+import LocandinaMenu from '@/public/images/LocandinaMenu.png'
 import lupofalosx from '@/public/images/lupi-falo-neri-sx.png'
 import lupofalodx from '@/public/images/lupi-falo-neri-dx.png'
 import qr from '@/public/images/qr.jpg'
